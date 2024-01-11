@@ -1,9 +1,20 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.5.RELEASE'
+        springBootVersion = '3.2.1'
     }
     repositories {
         mavenLocal()
+
+        def A_LI_YUN_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
+        def A_LI_YUN_JCENTER_URL = 'https://maven.aliyun.com/repository/jcenter/'
+        def A_LI_YUN_GOOGLE_URL = 'https://maven.aliyun.com/repository/google/'
+        def A_LI_YUN_GRADLE_PLUGIN_URL = 'https://maven.aliyun.com/repository/gradle-plugin/'
+
+        maven { url A_LI_YUN_REPOSITORY_URL }
+        maven { url A_LI_YUN_JCENTER_URL }
+        maven { url A_LI_YUN_GOOGLE_URL }
+        maven { url A_LI_YUN_GRADLE_PLUGIN_URL }
+
         mavenCentral()
     }
     dependencies {
@@ -20,6 +31,16 @@ apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenLocal()
+    def A_LI_YUN_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
+    def A_LI_YUN_JCENTER_URL = 'https://maven.aliyun.com/repository/jcenter/'
+    def A_LI_YUN_GOOGLE_URL = 'https://maven.aliyun.com/repository/google/'
+    def A_LI_YUN_GRADLE_PLUGIN_URL = 'https://maven.aliyun.com/repository/gradle-plugin/'
+
+    maven { url A_LI_YUN_REPOSITORY_URL }
+    maven { url A_LI_YUN_JCENTER_URL }
+    maven { url A_LI_YUN_GOOGLE_URL }
+    maven { url A_LI_YUN_GRADLE_PLUGIN_URL }
+
     mavenCentral()
 }
 
