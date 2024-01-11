@@ -12,7 +12,6 @@ import org.springframework.beans.BeansException;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.BindHandler;
 import org.springframework.boot.context.properties.bind.Bindable;
@@ -48,7 +47,6 @@ class DynamicPropertiesChangeBinderListener implements ApplicationContextAware,
         ApplicationListener<ApplicationStartedEvent>, ConfigChangeListener, Ordered {
 
     private Binder binder;
-    private ConfigurationBeanFactoryMetadata beanFactoryMetadata;
     private String[] apolloNamespaces;
     private static final int ORDER = DynamicPropertiesConfigBeanPostProcessor.ORDER - 1;
     private static final Logger LOGGER = LoggerFactory.getLogger(DynamicPropertiesChangeBinderListener.class);
